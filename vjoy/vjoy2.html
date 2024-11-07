@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <title>Basic VJoy</title>
+    </head>
+    <body>
+        <div class="app">
+            x: <span id="posX"></span> y:<span id="posY"></span>
+			<canvas id="vjoy_canvas" style="position:absolute; top:250px; left: 8px;" width="200" height="200"  ></canvas>
+            
+        </div>
+		<script type="text/javascript" src="vjoy_object.js"></script>
+    </body>
+</html>
