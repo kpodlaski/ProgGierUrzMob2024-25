@@ -2,6 +2,8 @@ var x = 100;
 var y = 100;
 var vx = 1;
 var vy = -2;
+var width = 200;
+var height = 200;
 function drawBall(){
         var canva = document.getElementById("ball_canvas");
         var ctx = canva.getContext("2d");
@@ -18,8 +20,11 @@ function updatePosition(){
 }
 
 function collision(){
-    if (y<15 || y>185) {
+    if (y<=10 || y>=height - 10) {
         vy=-vy;
+    }
+    if (x<=10 || x>=width -10) {
+        vx= -vx;
     }
 
     
@@ -32,4 +37,11 @@ function animation(){
     setTimeout(animation,10);
 }
 
-animation();
+function init (){
+    var canva = document.getElementById("ball_canvas");
+    width = canva.width;
+    height = canva.height;
+    animation();
+}
+
+init();
